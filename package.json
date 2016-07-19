@@ -1,7 +1,7 @@
 {
-  "name": "react-telephone-input",
+  "name": "react-telephone-input-simple",
   "version": "3.4.6",
-  "description": "React component for entering and validating international telephone numbers",
+  "description": "React component for entering and validating international telephone numbers - simplified by @fat",
   "main": "lib/ReactTelephoneInput.js",
   "scripts": {
     "lint": "eslint src",
@@ -19,7 +19,7 @@
   },
   "keywords": [
     "react-component",
-    "react-telephone-input",
+    "react-telephone-input-simple",
     "international-telephone-input",
     "react"
   ],
@@ -29,7 +29,7 @@
       "lessify"
     ]
   },
-  "author": "Mukesh Soni",
+  "author": "Jacob Thornton",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mukeshsoni/react-telephone-input/issues"
