@@ -49,8 +49,7 @@
   },
   "dependencies": {
     "classnames": "^2.1.2",
-    "lodash": "^3.10.1",
-    "react-onclickoutside": "5.3.1"
+    "lodash": "^3.10.1"
   },
   "peerDependencies": {
     "react": ">=0.14.0 || ^15.0.0",

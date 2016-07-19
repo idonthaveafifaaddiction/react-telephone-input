@@ -3601,7 +3601,7 @@ var ReactTelephoneInput = React.createClass({
             onBlur: this.handleInputBlur,
             onKeyDown: this.handleInputKeyDown,
             value: this.state.formattedNumber,
-            autofocus: this.props.autofocus,
+            autoFocus: this.props.autoFocus,
             ref: 'numberInput',
             type: 'tel',
             className: inputClasses,

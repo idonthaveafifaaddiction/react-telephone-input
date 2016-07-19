@@ -11,6 +11,8 @@ $ npm install react-telephone-input-simple
 var ReactTelInput = require('react-telephone-input-simple');
 React.render(<ReactTelInput
                 defaultCountry="in"
+                autoFocus="true"
+                placeholder="1 (415) 992-5555"
                 onChange={handleInputChange}/>
                 onBlur={handleInputBlur}
                 document.getElementById('my-container'));
