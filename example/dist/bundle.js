@@ -3364,6 +3364,7 @@ var ReactTelephoneInput = React.createClass({
         }, this._mapPropsToState(this.props));
     },
     propTypes: {
+        autofocus: React.PropTypes.bool,
         value: React.PropTypes.string,
         initialValue: React.PropTypes.string,
         autoFormat: React.PropTypes.bool,
@@ -3379,6 +3380,7 @@ var ReactTelephoneInput = React.createClass({
     getDefaultProps: function getDefaultProps() {
         return {
             value: '',
+            autofocus: false,
             initialValue: '',
             autoFormat: true,
             onlyCountries: allCountries,
@@ -3601,12 +3603,12 @@ var ReactTelephoneInput = React.createClass({
             onBlur: this.handleInputBlur,
             onKeyDown: this.handleInputKeyDown,
             value: this.state.formattedNumber,
-            autoFocus: this.props.autoFocus,
+            autofocus: this.props.autofocus,
             ref: 'numberInput',
             type: 'tel',
             className: inputClasses,
             autoComplete: 'tel',
-            placeholder: this.props.placeHolder });
+            placeholder: '+1 (702) 123-4567' });
     }
 });
 

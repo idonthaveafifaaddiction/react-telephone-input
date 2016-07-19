@@ -67,6 +67,7 @@ function isNumberValid(inputNumber) {
         );
     },
     propTypes: {
+        autofocus: React.PropTypes.bool,
         value: React.PropTypes.string,
         initialValue: React.PropTypes.string,
         autoFormat: React.PropTypes.bool,
@@ -82,6 +83,7 @@ function isNumberValid(inputNumber) {
     getDefaultProps() {
         return {
             value: '',
+            autofocus: false,
             initialValue: '',
             autoFormat: true,
             onlyCountries: allCountries,
@@ -306,12 +308,12 @@ function isNumberValid(inputNumber) {
               onBlur={this.handleInputBlur}
               onKeyDown={this.handleInputKeyDown}
               value={this.state.formattedNumber}
-              autoFocus={this.props.autoFocus}
+              autofocus={this.props.autofocus}
               ref="numberInput"
               type="tel"
               className={inputClasses}
               autoComplete='tel'
-              placeholder={this.props.placeHolder}/>
+              placeholder='+1 (702) 123-4567' />
         );
     }
 });
