@@ -1,10 +1,11 @@
-Reactjs Component for International Telephone Input
-===================================================
+Simple react telephone input
+----------------------------
 
-This is a fork of https://github.com/mukeshsoni/react-telephone-input.
+This is a simplified fork of https://github.com/mukeshsoni/react-telephone-input.
 
-I removed the dropdown and a bunch of things i wasn't interested in and made it so
-this component just returns a raw <input>
+```
+$ npm install react-telephone-input-simple
+```
 
 ```js
 var ReactTelInput = require('react-telephone-input-simple');
