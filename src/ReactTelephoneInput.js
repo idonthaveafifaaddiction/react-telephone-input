@@ -18,7 +18,6 @@ var startsWith = require('lodash/string/startsWith');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var onClickOutside = require('react-onclickoutside');
 var classNames = require('classnames');
 var countryData = require('./country_data');
 var allCountries = countryData.allCountries;
@@ -307,13 +306,14 @@ function isNumberValid(inputNumber) {
               onBlur={this.handleInputBlur}
               onKeyDown={this.handleInputKeyDown}
               value={this.state.formattedNumber}
+              autofocus={this.props.autofocus}
               ref="numberInput"
               type="tel"
               className={inputClasses}
               autoComplete='tel'
-              placeholder='+1 (702) 123-4567'/>
+              placeholder={this.props.placeHolder}/>
         );
     }
 });
 
-export default onClickOutside(ReactTelephoneInput);
+export default ReactTelephoneInput;

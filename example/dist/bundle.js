@@ -3315,7 +3315,6 @@ var startsWith = require('lodash/string/startsWith');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var onClickOutside = require('react-onclickoutside');
 var classNames = require('classnames');
 var countryData = require('./country_data');
 var allCountries = countryData.allCountries;
@@ -3602,15 +3601,16 @@ var ReactTelephoneInput = React.createClass({
             onBlur: this.handleInputBlur,
             onKeyDown: this.handleInputKeyDown,
             value: this.state.formattedNumber,
+            autofocus: this.props.autofocus,
             ref: 'numberInput',
             type: 'tel',
             className: inputClasses,
             autoComplete: 'tel',
-            placeholder: '+1 (702) 123-4567' });
+            placeholder: this.props.placeHolder });
     }
 });
 
 exports.ReactTelephoneInput = ReactTelephoneInput;
-exports['default'] = onClickOutside(ReactTelephoneInput);
+exports['default'] = ReactTelephoneInput;
 
-},{"./country_data":91,"classnames":undefined,"lodash/array/findIndex":2,"lodash/array/first":3,"lodash/array/rest":5,"lodash/collection/filter":6,"lodash/collection/findWhere":8,"lodash/collection/map":9,"lodash/collection/reduce":10,"lodash/collection/some":11,"lodash/function/debounce":13,"lodash/function/memoize":14,"lodash/lang/isEqual":78,"lodash/object/assign":83,"lodash/string/startsWith":87,"lodash/string/trim":88,"react":undefined,"react-dom":undefined,"react-onclickoutside":undefined}]},{},[]);
+},{"./country_data":91,"classnames":undefined,"lodash/array/findIndex":2,"lodash/array/first":3,"lodash/array/rest":5,"lodash/collection/filter":6,"lodash/collection/findWhere":8,"lodash/collection/map":9,"lodash/collection/reduce":10,"lodash/collection/some":11,"lodash/function/debounce":13,"lodash/function/memoize":14,"lodash/lang/isEqual":78,"lodash/object/assign":83,"lodash/string/startsWith":87,"lodash/string/trim":88,"react":undefined,"react-dom":undefined}]},{},[]);
