@@ -260,7 +260,8 @@ function isNumberValid(inputNumber) {
     },
     _fillDialCode() {
         // if the input is blank, insert dial code of the selected country
-        if(this.refs.numberInput.value === '+') {
+        // somtimes we choke and forget what the hell a number input is -_-
+        if(this.refs.numberInput && this.refs.numberInput.value === '+') {
             this.setState({formattedNumber: '+' + this.state.selectedCountry.dialCode});
         }
     },
