@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mukeshsoni/react-telephone-input"
+    "url": "https://github.com/evansimpson/react-telephone-input"
   },
   "keywords": [
     "react-component",
@@ -49,7 +49,9 @@
   },
   "dependencies": {
     "classnames": "^2.1.2",
-    "lodash": "^3.10.1"
+    "create-react-class": "^15.6.2",
+    "lodash": "^3.10.1",
+    "prop-types": "^15.6.0"
   },
   "peerDependencies": {
     "react": ">=0.14.0 || ^15.0.0",

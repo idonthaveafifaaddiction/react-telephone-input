@@ -18,6 +18,8 @@ var startsWith = require('lodash/string/startsWith');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var createReactClass = require('create-react-class');
+var PropTypes = require('prop-types');
 var classNames = require('classnames');
 var countryData = require('./country_data');
 var allCountries = countryData.allCountries;
@@ -49,7 +51,7 @@ function isNumberValid(inputNumber) {
     });
 }
 
-  export var ReactTelephoneInput = React.createClass({
+  export var ReactTelephoneInput = createReactClass({
     getInitialState() {
         var preferredCountries = this.props.preferredCountries.map(
             iso2 => allCountriesIso2Lookup.hasOwnProperty(iso2) ? allCountries[allCountriesIso2Lookup[iso2]] : null
@@ -67,18 +69,18 @@ function isNumberValid(inputNumber) {
         );
     },
     propTypes: {
-        autofocus: React.PropTypes.bool,
-        value: React.PropTypes.string,
-        initialValue: React.PropTypes.string,
-        autoFormat: React.PropTypes.bool,
-        defaultCountry: React.PropTypes.string,
-        onlyCountries: React.PropTypes.arrayOf(React.PropTypes.object),
-        preferredCountries: React.PropTypes.arrayOf(React.PropTypes.string),
-        classNames: React.PropTypes.string,
-        onChange: React.PropTypes.func,
-        onEnterKeyPress: React.PropTypes.func,
-        onBlur: React.PropTypes.func,
-        onFocus: React.PropTypes.func
+        autofocus: PropTypes.bool,
+        value: PropTypes.string,
+        initialValue: PropTypes.string,
+        autoFormat: PropTypes.bool,
+        defaultCountry: PropTypes.string,
+        onlyCountries: PropTypes.arrayOf(PropTypes.object),
+        preferredCountries: PropTypes.arrayOf(PropTypes.string),
+        classNames: PropTypes.string,
+        onChange: PropTypes.func,
+        onEnterKeyPress: PropTypes.func,
+        onBlur: PropTypes.func,
+        onFocus: PropTypes.func
     },
     getDefaultProps() {
         return {
